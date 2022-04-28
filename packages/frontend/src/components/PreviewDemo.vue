@@ -31,6 +31,9 @@ const service = axios.create({
   timeout: 6000
 })
 
+/**
+ * 解析 filename
+ */
 function extractFileNameFromContentDispositionHeader (value) {
   const patterns = [
     /filename\*=[^']+'\w*'"([^"]+)";?/i,
