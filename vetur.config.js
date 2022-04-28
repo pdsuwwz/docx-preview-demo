@@ -7,7 +7,7 @@ module.exports = {
   },
   projects: [
     {
-      root: './packages/frontend'
+      root: './frontend'
     }
   ]
 }

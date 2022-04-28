@@ -24,13 +24,13 @@ importers:
       eslint-plugin-promise: 6.0.0_eslint@8.14.0
       eslint-plugin-vue: 8.7.1_eslint@8.14.0
 
-  packages/backend:
+  backend:
     specifiers:
       express: ^4.18.0
     dependencies:
       express: 4.18.0
 
-  packages/frontend:
+  frontend:
     specifiers:
       '@vitejs/plugin-vue': ^2.3.1
       axios: ^0.27.2
@@ -1128,7 +1128,7 @@ packages:
       babel-plugin-polyfill-corejs2: 0.3.1_@babel+core@7.17.9
       babel-plugin-polyfill-corejs3: 0.5.2_@babel+core@7.17.9
       babel-plugin-polyfill-regenerator: 0.3.1_@babel+core@7.17.9
-      core-js-compat: 3.22.2
+      core-js-compat: 3.22.3
       semver: 6.3.0
     transitivePeerDependencies:
       - supports-color
@@ -1479,7 +1479,7 @@ packages:
     dependencies:
       '@babel/core': 7.17.9
       '@babel/helper-define-polyfill-provider': 0.3.1_@babel+core@7.17.9
-      core-js-compat: 3.22.2
+      core-js-compat: 3.22.3
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1686,8 +1686,8 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
-  /core-js-compat/3.22.2:
-    resolution: {integrity: sha512-Fns9lU06ZJ07pdfmPMu7OnkIKGPKDzXKIiuGlSvHHapwqMUF2QnnsWwtueFZtSyZEilP0o6iUeHQwpn7LxtLUw==}
+  /core-js-compat/3.22.3:
+    resolution: {integrity: sha512-wliMbvPI2idgFWpFe7UEyHMvu6HWgW8WA+HnDRtgzoSDYvXFMpoGX1H3tPDDXrcfUSyXafCLDd7hOeMQHEZxGw==}
     dependencies:
       browserslist: 4.20.3
       semver: 7.0.0
