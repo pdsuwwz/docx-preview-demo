@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "private": true,
-  "version": "1.0.0",
+  "version": "3.0",
   "main": "index.js",
   "scripts": {
     "dev": "node index.js"

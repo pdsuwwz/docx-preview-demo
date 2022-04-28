@@ -1,6 +1,6 @@
 {
   "name": "docx-preview-demo",
-  "version": "1.0.0",
+  "version": "3.0",
   "description": "Docx Preview Demo",
   "scripts": {
     "start": "concurrently 'pnpm frontend' 'pnpm backend'",
