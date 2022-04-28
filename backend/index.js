@@ -6,7 +6,6 @@ const app = express()
 const PORT = 4000
 
 const docPath = path.resolve(process.cwd(), '..', 'doc')
-console.log('docPath', docPath)
 
 const fileName = '职场新人必读书5本推荐.docx'
 
