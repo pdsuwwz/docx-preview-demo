@@ -1,0 +1,23 @@
+{
+  "name": "docx-preview-demo",
+  "version": "1.0.0",
+  "description": "Docx Preview Demo",
+  "scripts": {
+    "start": "concurrently 'pnpm frontend' 'pnpm backend'",
+    "frontend": "pnpm --filter \"frontend\" dev",
+    "backend": "pnpm --filter \"backend\" dev"
+  },
+  "author": "Wisdom",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "concurrently": "^7.1.0",
+    "eslint": "^8.14.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-vue": "^8.7.1"
+  }
+}
