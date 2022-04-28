@@ -5,7 +5,9 @@
   "scripts": {
     "start": "concurrently 'pnpm frontend' 'pnpm backend'",
     "frontend": "pnpm --filter \"frontend\" dev",
-    "backend": "pnpm --filter \"backend\" dev"
+    "backend": "pnpm --filter \"backend\" dev",
+    "lint": "eslint . --ext .js,.ts,.jsx,.tsx,.vue",
+    "lint:fix": "eslint . --fix --cache --ext .js,.ts,.jsx,.tsx,.vue"
   },
   "author": "Wisdom",
   "license": "MIT",

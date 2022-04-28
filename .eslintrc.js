@@ -1,49 +1,49 @@
 module.exports = {
-  'root': true,
-  'env': {
-    'node': true,
-    'es6': true,
-    'browser': true,
-    'jest': true
+  root: true,
+  env: {
+    node: true,
+    es6: true,
+    browser: true,
+    jest: true
   },
-  'globals': {
-    'defineProps': 'readonly',
-    'defineEmits': 'readonly',
-    'defineExpose': 'readonly',
-    'withDefaults': 'readonly'
+  globals: {
+    defineProps: 'readonly',
+    defineEmits: 'readonly',
+    defineExpose: 'readonly',
+    withDefaults: 'readonly'
   },
-  'extends': [
+  extends: [
     'eslint:recommended',
     'plugin:vue/base',
     'plugin:vue/vue3-essential',
     'plugin:vue/vue3-strongly-recommended',
     'plugin:vue/vue3-recommended'
   ],
-  'parserOptions': {
-    'requireConfigFile': false,
-    'ecmaFeatures': {
-      'legacyDecorators': true
+  parserOptions: {
+    requireConfigFile: false,
+    ecmaFeatures: {
+      legacyDecorators: true
     },
-    'parser': '@babel/eslint-parser'
+    parser: '@babel/eslint-parser'
   },
-  'rules': {
+  rules: {
     'vue/multi-word-component-names': 0,
     'vue/no-unused-components': 1,
     'vue/no-mutating-props': 0,
     'vue/script-setup-uses-vars': 'error',
     'vue/v-on-event-hyphenation': ['warn', 'always', {
-      'autofix': true
+      autofix: true
     }],
     'vue/valid-template-root': 'off',
     'vue/no-multiple-template-root': 'off',
     'vue/html-self-closing': ['error', {
-      'html': {
-        'void': 'never',
-        'normal': 'never',
-        'component': 'always'
+      html: {
+        void: 'never',
+        normal: 'never',
+        component: 'always'
       },
-      'svg': 'always',
-      'math': 'always'
+      svg: 'always',
+      math: 'always'
     }],
     'no-unused-vars': 1,
     'no-undef': 1,
@@ -54,26 +54,37 @@ module.exports = {
     'no-irregular-whitespace': 2,
     'no-multi-spaces': 1,
     'no-multiple-empty-lines': [2, {
-      'max': 1
+      max: 1
     }],
     'eol-last': 2,
-    'quotes': ['error', 'single', {
-      'avoidEscape': true,
-      'allowTemplateLiterals': true
+    // https://lbbdegitbook.gitbooks.io/airbnb/content/key-spacing.html
+    'key-spacing': ['error', {
+      //冒号之前不能有空格
+      beforeColon: false,
+      //冒号之后有空格
+      afterColon: true
     }],
+    quotes: ['error', 'single', {
+      avoidEscape: true,
+      allowTemplateLiterals: true
+    }],
+
+    // https://eslint.bootcss.com/docs/rules/quote-props
+    // 要求对象字面量属性名称使用引号 (quote-props)
+    'quote-props': ['error', 'as-needed'],
     'prefer-const': 2,
-    'camelcase': ['error', {
-      'properties': 'never'
+    camelcase: ['error', {
+      properties: 'never'
     }],
-    'indent': ['error', 2, {
-      'SwitchCase': 1
+    indent: ['error', 2, {
+      SwitchCase: 1
     }],
-    'semi': ['error', 'never'],
+    semi: ['error', 'never'],
     'space-before-function-paren': 'error'
   },
-  'settings': {
+  settings: {
     'import/parsers': {
-      'espree': [
+      espree: [
         '.js',
         '.jsx'
       ]
