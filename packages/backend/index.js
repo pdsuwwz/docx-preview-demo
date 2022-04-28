@@ -3,7 +3,7 @@ const path = require('path')
 
 const express = require('express')
 const app = express()
-const port = 4000
+const PORT = 4000
 
 const docPath = path.resolve(process.cwd(), '..', 'doc')
 console.log('docPath', docPath)
@@ -28,6 +28,22 @@ app.get('/getDoc', (req, res) => {
 
 })
 
-app.listen(port, () => {
-  console.log(`App listening on port ${port}`)
+app.listen(PORT, () => {
+  const blank = ''.padStart(1)
+
+  console.log(
+    '\n',
+    blank,
+    '🚀🚀🚀',
+    '\x1b[32m',
+    'Backend Server running at:\n',
+    '\x1b[0m'
+  )
+  console.log(
+    blank,
+    '> Local:  ',
+    '\x1b[36m',
+    `http://localhost:${PORT}/`,
+    '\x1b[0m'
+  )
 })
