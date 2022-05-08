@@ -1,6 +1,11 @@
-# Docx Preview Demo
+<h1 align="center">
+Docx Preview Demo
+</h1>
 
-* 基于 docx-preview + Vue 3 的 word 文档在线预览示例
+<p align="center">
+🔍 基于 docx-preview + Vue 3 的 word 文档在线预览示例
+<p>
+
 
 ## 1、安装
 
