@@ -9,13 +9,13 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
-    "docx-preview": "^0.1.10",
+    "docx-preview": "^0.1.11",
     "vue": "^3.2.33"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^2.3.1",
+    "@vitejs/plugin-vue": "^2.3.3",
     "sass": "^1.51.0",
-    "vite": "^2.9.6",
-    "vite-plugin-commonjs": "^0.2.6"
+    "vite": "^2.9.9",
+    "vite-plugin-commonjs": "^0.4.7"
   }
 }
