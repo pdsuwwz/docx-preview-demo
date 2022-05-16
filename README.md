@@ -11,24 +11,22 @@ Docx Preview Demo
 </p>
 
 
-## Install
+## 📦 Install
 
 ```
 pnpm install
 ```
 
-## Run
+## 🚀 Running
 
 ```
 pnpm start
 ```
 
-## Play
+🎡 Playground: http://localhost:4500/
 
-http://localhost:4500/
 
-## Update dependencies
-
+## 🤟 Update Dependencies
 
 ```
 $ pnpm --recursive update
