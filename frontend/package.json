@@ -10,12 +10,12 @@
   "dependencies": {
     "axios": "^0.27.2",
     "docx-preview": "^0.1.11",
-    "vue": "^3.2.33"
+    "vue": "^3.2.37"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^2.3.3",
-    "sass": "^1.51.0",
-    "vite": "^2.9.9",
+    "@vitejs/plugin-vue": "^3.0.1",
+    "sass": "^1.53.0",
+    "vite": "^3.0.2",
     "vite-plugin-commonjs": "^0.4.7"
   }
 }
