@@ -15,14 +15,14 @@
     "node": ">= 14.19.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.9",
+    "@babel/core": "^7.19.0",
     "@babel/eslint-parser": "^7.18.9",
-    "@babel/preset-env": "^7.18.9",
-    "concurrently": "^7.3.0",
-    "eslint": "^8.20.0",
+    "@babel/preset-env": "^7.19.0",
+    "concurrently": "^7.4.0",
+    "eslint": "^8.23.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-promise": "^6.0.1",
     "eslint-plugin-vue": "^8.7.1"
   }
 }
