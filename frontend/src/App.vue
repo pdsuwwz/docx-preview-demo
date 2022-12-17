@@ -1,10 +1,17 @@
 <template>
-  <img
-    alt="Vue logo"
-    src="@/assets/logo.png"
-  >
-  <!-- <HelloWorld msg="Hello Vue 3 + Vite" /> -->
-  <PreviewDemo />
+  <Suspense>
+    <div>
+      <img
+        alt="Vue logo"
+        src="@/assets/logo.png"
+      >
+      <!-- <HelloWorld msg="Hello Vue 3 + Vite" /> -->
+      <PreviewDemo />
+    </div>
+    <template #fallback>
+      Loading...
+    </template>
+  </Suspense>
 </template>
 
 <script setup>

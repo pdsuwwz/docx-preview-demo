@@ -8,14 +8,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "axios": "^0.27.2",
-    "docx-preview": "^0.1.11",
-    "vue": "^3.2.39"
+    "axios": "^1.2.1",
+    "docx-preview": "^0.1.14",
+    "vue": "^3.2.45"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^3.1.0",
-    "sass": "^1.54.9",
-    "vite": "^3.1.0",
-    "vite-plugin-commonjs": "^0.4.7"
+    "@vitejs/plugin-vue": "^4.0.0",
+    "sass": "^1.57.0",
+    "vite": "^4.0.1",
+    "vite-plugin-commonjs": "^0.6.1"
   }
 }
