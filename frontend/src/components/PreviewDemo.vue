@@ -17,14 +17,19 @@
 </template>
 
 <script>
+import { defineComponent, ref } from 'vue'
+
+export default defineComponent({
+  name: 'PreviewDemo'
+})
+
+</script>
+<script setup>
 
 // 引入axios用来发请求
-import {
-  defineComponent,
-  ref
-} from 'vue'
 import axios from 'axios'
-const docx = require('docx-preview')
+const docxPromise = () => import('docx-preview')
+const docx = await docxPromise()
 
 const service = axios.create({
   baseURL: '/api/getDoc',
@@ -58,53 +63,42 @@ function extractFileNameFromContentDispositionHeader (value) {
   return null
 }
 
-export default defineComponent({
-  name: 'PreviewDemo',
-  setup () {
-    const refFile = ref(null)
-    const message = ref('')
-    console.log('使用插件的 renderAsync 方法来渲染', docx)
+const refFile = ref(null)
 
-    // 预览
-    const goPreview = async () => {
-      const { data } = await service({
-        method: 'get',
-        responseType: 'blob'
-      })
-      docx.renderAsync(data, refFile.value)
-    }
+console.log('使用插件的 renderAsync 方法来渲染', docx)
 
-    // 下载
-    const downLoad = async () => {
-      const res = await service({
-        method: 'get',
-        responseType: 'blob'
-      })
-      const fileName = extractFileNameFromContentDispositionHeader(
-        res.headers?.['content-disposition']
-      )
+// 预览
+const goPreview = async () => {
+  const { data } = await service({
+    method: 'get',
+    responseType: 'blob'
+  })
+  docx.renderAsync(data, refFile.value)
+}
 
-      const blob = new Blob([res.data])
-      const link = document.createElement('a')
+// 下载
+const downLoad = async () => {
+  const res = await service({
+    method: 'get',
+    responseType: 'blob'
+  })
+  const fileName = extractFileNameFromContentDispositionHeader(
+    res.headers?.['content-disposition']
+  )
 
-      link.href = URL.createObjectURL(blob)
-      link.download = fileName || 'word文件.docx'
-      link.style.display = 'none'
+  const blob = new Blob([res.data])
+  const link = document.createElement('a')
 
-      document.body.appendChild(link)
+  link.href = URL.createObjectURL(blob)
+  link.download = fileName || 'word文件.docx'
+  link.style.display = 'none'
 
-      link.click()
-      link.remove()
-    }
+  document.body.appendChild(link)
 
-    return {
-      message,
-      refFile,
-      goPreview,
-      downLoad
-    }
-  }
-})
+  link.click()
+  link.remove()
+}
+
 </script>
 
 <style lang="scss" scoped>
