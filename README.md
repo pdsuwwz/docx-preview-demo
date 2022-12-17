@@ -3,7 +3,7 @@ Docx Preview Demo
 </h1>
 
 <p align="center">
-🔍 Word Viewer Online 基于 docx-preview + Vue 3 的 Word 文档在线预览示例
+🔍 Word Viewer Online 基于 docx-preview + Vue3 + Vite4 的 Word 文档在线预览示例
 <p>
 
 <p align="center">
